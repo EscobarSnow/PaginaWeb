@@ -1,0 +1,31 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+body{
+    background-color: snow;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    padding: 2.5%;
+    position: fixed;
+    display: inline-block;
+    width: 80%;
+    background-color: #152348;
+    
+}
+
+header img{
+    width: 12%;
+    /* height: auto; */
+    float: left;
+    margin: 1%;
+}
+
+header h1{
+    padding-top: 5%;
+    color: white;
+}
