@@ -3,43 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Inici</title>
     <link rel="stylesheet" href="css/estils.css">
 </head>
 <body>
     <div id="all">
-        <header>
-            <div class="capcalada">
-                <img src="./imatges/logo.png" alt="logotip">
-                <h1>EscobarSnow</h1>
-                <nav>
-                    <div class="menu">
-                        <a href="#">Productes</a>
-                        <a href="#">Contacte</a>    
-                    </div>
-                </nav>
+            <header>
+                <div class="capcalada">
+                    <img src="./imatges/logo.png" alt="logotip">
+                    <h1>EscobarSnow</h1>
+                    <nav>
+                        <div class="menu">
+                            <a href="index.html">Inici</a>
+                            <a href="productes.php">Productes</a>
+                            <a href="#">Contacte</a>    
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="container">
+                <ul class="slider">
+                    <li id="slide1"><img src="./imatges/Esqui.jpg" alt="Esquis1"></li>
+                    <li id="slide2"><img src="./imatges/Esqui2.jpg" alt="Esquis2"></li>
+                </ul>
+                    
+                <ul class="nav_slide">
+                    <li><a href="#slide1">1</a></li>
+                    <li><a href="#slide2">2</a></li>
+                </ul>
+                <div class="info">
+                    <h2>Els millors productes d'esqui</h2>
+                    <p>Informa't dels productes oferits i crea el teu kit per llogar a les nostres oficines.</p>
+                    <p>Des dels esquis, botes i pals més clàssics als més moderns al millor preu</p>
+                    <button type="button">&#128681 On som?</button>
+                </div>
+            </section>
+
+            <div class="procediment">
+                <h2>Quin és el procediment?</h2>
+                <p>Del procediment en parlem de com és realitzaran els lloguers.</p>
+                <p>El client pot visitar la nostra pàgina per visualitzar els productes que oferim.</p>
+                <p>Fet aixó, a les nostres oficines amb les seves preferències, els recepcionistes realitzaran <br> el kit que desitjen així per llogar-lo el temps que desitjen</p>
+                <img src="./imatges/Recepcio.jpg" alt="Recepcio">
             </div>
-        </header>
-
-        <section class="container">
-            <ul class="slider">
-                <li id="slide1"><img src="./imatges/Esqui.jpg" alt="Esquis1"></li>
-                <li id="slide2"><img src="./imatges/Esqui2.jpg" alt="Esquis2"></li>
-            </ul>
-                
-            <ul class="nav_slide">
-                <li><a href="#slide1">1</a></li>
-                <li><a href="#slide2">2</a></li>
-            </ul>
-        </section>
-        <div class="info">
-            <h2>Els millors productes d'esqui</h2>
-            <p>Informa't dels productes oferits i crea el teu kit per llogar a les nostres oficines.</p>
-            <p>Des dels esquis, botes i pals més clàssics als més moderns al millor preu</p>
-            <button type="button">&#128681 On som?</button>
-
-        </div>
-        <div></div>
+            <footer>
+                <div class="social">
+                    <ul class="menu_simple">
+                        <li><a href="https://www.facebook.com/"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="sobreempresa">
+                    <ul>
+                        <li class="titolfooter">Serveis</li>
+                        <li><a href="#">Lloguers</a></li>
+                        <li><a href="#">Material</a></li>
+                    </ul>
+                    <ul>
+                        <li class="titolfooter">Atenció al clients</li>
+                        <li>Tlf:/973158534</li>
+                        <li>Email:info@escobarsnow.es</li>
+                    </ul>
+                    <ul>
+                        <li class="titolfooter">Sobre EscobarSnow</li>
+                        <li><a href="#">Qui som?</a></li>
+                        <li><a href="#">On estem?</a></li>
+                    </ul>
+                </div>
+            </footer>
     </div>
 </body>
 </html>
