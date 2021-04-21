@@ -14,26 +14,35 @@ body{
     margin: 0 auto;
     height: auto;
 }
+
 header{
-    padding: 2.5%;
+    position: fixed;
     display: inline-block;
     z-index: 100;
     width: 100%;
     background-color: #152348;
-    margin: 0 auto;
-    height: 200px;
+    margin-bottom: 50px;
+    height: 235px;
+    margin-top: -235px;
 }
 
 header img{
-    width: 12%;
-    height: 12%;
+    width: 10%;
     float: left;
+    margin: 20px 23px 10px 23px;
 }
 
 header h1{
-    padding-top: 5%;
-    font-size: 40px;
+    margin-top: 15px;
+    padding-top: 4%;
+    padding-left: 300px;
+    font-size: 55px;
     color: white;
+}
+
+nav{
+    height: 50px;
+    padding: 50px;
 }
 
 .menu{
@@ -41,13 +50,9 @@ header h1{
     justify-content: flex-end;
     align-items: center;
     font-size: 25px;
-    margin-top: -60px;
+    margin-top: -110px;
 }
 
-nav{
-    height: 50px;
-    padding: 50px;
-}
 .menu a{
     text-decoration: none;
     color: white;
@@ -59,11 +64,14 @@ nav{
     color: #152348;
 }
 
-.container{
+section{
+    margin-top: 211px;
+}
+
+article{
     background-color: #E2E5E7 ;
     width: 100%;
-    padding: 2.5%;
-    height: 570px;
+    height: 605px;
     display: inline-block;
     text-align: center;
     margin: auto;
@@ -99,7 +107,6 @@ ul.slider li img{
     overflow: hidden;
     object-fit: cover;    
     margin-left: 5%;
-    /* margin-right: 85%; */
 }
 
 ul.slider li:first-child{
@@ -109,16 +116,14 @@ ul.slider li:first-child{
 ul.slider li:target{
     opacity: 1;
 }
-
 .nav_slide{
     text-align: center;
     margin: 10px;
+    margin-left: 25px;
     margin-bottom: -20px;
     display: flex;
     justify-content: start;
-    /* margin-left: -1200px; */
 }
-
 .nav_slide li{
     display: inline-block;
     text-align: center;
@@ -130,34 +135,36 @@ ul.slider li:target{
     text-decoration: none;
     background-color: grey;
     padding: 10px;
+    margin-right: 5px;
     width: 20px;
     height: 20px;
     font-size: 20px;
     border-radius: 100%;
 }
+
 .info{
     width: auto;
     height: auto;
     text-align: center;
     padding: 10px;
-    margin-left: 60%;
+    margin-left: 54%;
     margin-top: -550px;
 }
+
 .info h2{
     font-size: 50px;
     color: #3393DE;
 }
 
 .info p{
-    margin: 20px;
+    margin: 10px 0px;
     font-size: 20px;
-    text-align: start;
     color: #636668;
 }
 
 .info button{
-    margin-left: -75%;
-    margin-top: 40px;
+    margin-left: 0;
+    margin-top: 30px;
     font-size: 30px;
     background-color: #C33838;
     color: white;
@@ -167,27 +174,29 @@ ul.slider li:target{
     border-radius: 50px;
 }
 
-.procediment{
-    width: 100%;
-    height: 570px;
-    /* text-align: center; */
-    padding: 2.5%;
-    display: inline-block;
-    margin: auto;
-    background-color:#E2E5E7 ;
-    padding: 60px;
+.info button a{
+    color: black;
+    text-decoration: none;
 }
 
 .procediment h2{
     font-size: 50px;
     color: #3393DE;
+    margin-left: -50%;
+    margin-top: 1%;
 }
 
-.procediment p{
-    margin: 15px;
+.text{
+    margin-top: 18px;
+    margin-left: -50%;
     font-size: 20px;
     text-align: start;
     color: #636668;
+    text-align: center;
+}
+
+.text p{
+    margin-top: 10px;
 }
 
 .procediment img{
@@ -195,28 +204,29 @@ ul.slider li:target{
     max-height: 500px;
     height: auto;
     overflow: hidden;
-    /* object-fit: cover;     */
     margin-left: 50%;
-    margin-top: -10%;
+    margin-top: -11.5%;
 }
 
 footer{
-    padding: 2.5%;
+    padding: 1.5% 0;
     width: 100%;
     background-color: #152348;
     margin: 0 auto;
-    height: 200px;
+    height: 100px;
 }
 
 .social{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-top: -20px;
+    margin-right: 20px;
 }
 
 .fa{
-    padding: 20px;
-    font-size: 30px;
+    padding: 8px;
+    font-size: 20px;
     width: 50px;
     text-align: center;
     text-decoration: none;
@@ -244,7 +254,7 @@ footer{
 
 .sobreempresa{
     color: #d39c2f;
-    margin-top: -13%;
+    margin-top: -6.7%;
 
 }
 
@@ -259,9 +269,9 @@ footer{
 }
 
 .sobreempresa li{
-    /* margin: 5%; */
     height: auto;
     width: auto;
+    margin-bottom: 5px;
 }
 
 .sobreempresa a{
@@ -272,9 +282,280 @@ footer{
 
 .titolfooter {
     background-color: white;
-    color: #707071;
+    color: black;
     width: 130px;
     border-radius: 5px;
     padding: 3px;
+    margin-bottom: 10px;
 }
 
+
+/***************/
+/*MEDIA QUERIES*/
+/***************/
+
+/*MÒBIL*/
+
+@media screen and (max-width: 600px){
+    #all{
+        width: 100%;
+    }
+    
+    header{
+        height: 162px;
+    }
+    
+    header img {
+        width: 110px;
+        margin-top: 0%;
+    }
+    
+    header h1 {
+            margin-top: 7%;
+    padding-left: 33%;
+    font-size: 38px;
+    color: white;
+    }
+    
+    body{
+        margin-top: 0px;
+        width: 100%;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 20px;
+        margin-top: -38px;
+        margin-right: 25%;
+        }
+
+    .menu a{
+        text-decoration: none;
+        color: white;
+        padding: 2% 4%;
+    }
+
+    .menu a:hover{
+        background-color: white;
+        color: #152348;
+    }
+    
+    section{
+        margin-top: 211px;
+        width: 100%;
+    }
+
+    article{    
+        background-color: #E2E5E7;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        text-align: center;
+        margin-top: -75px;
+    }
+
+    ul, li{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    ul.slider{    
+        position: relative;
+        width: 100%;
+        height: 335px;
+    }
+
+    ul.slider li{
+        position: absolute;
+        left: 0px;
+        top: 0xp;
+        opacity: 0;
+        width: inherit;
+        height: inherit;
+        transition: opacity .5s;
+        background: #E2E5E7 ;
+    }
+
+    ul.slider li img{    
+        width: 100%;
+        object-fit: cover;
+        margin: 0%;
+    }
+
+    ul.slider li:first-child{
+        opacity: 1;
+    }
+
+    ul.slider li:target{
+        opacity: 1;
+    }
+    .nav_slide{    
+        text-align: center;
+        margin: 10px;
+        margin-left: 25px;
+        margin-top: 7%;
+        margin-bottom: 92px;
+        display: flex;
+        justify-content: start;
+    }
+    .nav_slide li{
+        display: inline-block;
+        text-align: center;
+    }
+
+    .nav_slide li a{    
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        background-color: grey;
+        margin-right: 5px;
+        padding: 10px;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        border-radius: 100%;
+    }
+
+    .info{
+        width: 96%;
+        text-align: center;
+        margin-left: 0%;
+        margin-bottom: 15%;
+        margin-top: -68px;
+    }
+
+    .info h2{
+        font-size: 40px;
+        color: #3393DE;
+    }
+
+    .info p{
+        margin: 10px 0px;
+        font-size: 15px;
+        color: #636668;
+    }
+
+    .info button{
+        margin-top: 17px;
+        font-size: 20px;
+        background-color: #C33838;
+        color: white;
+        padding: 11px;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+
+    .procediment h2{
+        font-size: 40px;
+        color: #3393DE;
+        margin-left: 0%;
+        margin-top: 1%;
+    }
+
+    .text{
+        margin-top: 18px;
+        margin-left: 0%;
+        font-size: 15px;
+        text-align: start;
+        color: #636668;
+        text-align: center;
+    }
+
+    .text p{
+        margin-top: 10px;
+    }
+
+    .procediment img{
+        width: 100%;
+        max-height: 500px;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: -4px;
+        margin-top: 5.5%;
+        margin-left: 0;
+    }
+
+    footer{
+        padding: 1.5% 0;
+        width: 100%;
+        background-color: #152348;
+        margin: 0 auto;
+        height: 124px;
+    }
+
+    .social{    
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: -5px;
+        margin-right: 5px;
+    }
+
+    .fa{    
+        padding: 7px 0px;
+        font-size: 20px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }
+
+    .fa:hover{
+        opacity: 0.7;
+    }
+
+    .fa-facebook{
+        background: #3B5998;
+        color: white;
+    }
+
+    .fa-instagram {
+        background: #125688;
+        color: white;
+    }
+
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+
+    .sobreempresa{
+        color: #d39c2f;
+        margin-top: -24%;
+
+    }
+
+    .sobreempresa ul{
+        list-style: none;
+        display: inline-block;
+        margin-top: 35px;
+        margin-left: 22px;
+        font-size: 15px;
+        height: auto;
+        width: auto;
+    }
+
+    .sobreempresa li{
+        height: auto;
+        width: auto;
+        margin-bottom: 5px;
+    }
+
+    .sobreempresa a{
+        text-decoration: none;
+        color: #d39c2f;
+        margin-top: -13%;
+    }
+
+    .titolfooter {
+        background-color: white;
+        color: black;
+        width: 130px;
+        border-radius: 5px;
+        padding: 3px;
+        margin-bottom: 10px;
+    }
+}

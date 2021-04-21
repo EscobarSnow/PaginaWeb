@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Productes</title>
     <link rel="stylesheet" href="css/estils_prod.css">
@@ -20,7 +21,6 @@
                     <div class="menu">
                         <a href="index.html">Inici</a>
                         <a href="productes.php">Productes</a>
-                        <a href="#">Contacte</a>    
                     </div>
                 </nav>
             </div>
@@ -28,13 +28,14 @@
 
         <div class="productes">
             <h2>Productes oferits</h2>
+            
             <div id="filtre">
                 <button class="btn active" onclick="filterSelection('all')">Mostra tot</button>
-                <button class="btn" onclick="filterSelection('esquis')" >Esquis</button>
-                <button class="btn" onclick="filterSelection('botes')" >Botes</button>
-                <button class="btn" onclick="filterSelection('pals')" >Pals</button>
+                <button class="btn" onclick="filtrarEsquis()" >Esquis</button>
+                <button class="btn" onclick="filtrarBotes()" >Botes</button>
+                <button class="btn" onclick="filtrarPals()" >Pals</button>
             </div>
-
+          
             <table>
                 <tr>
                     <th>Marca</th>
@@ -86,7 +87,7 @@
                     while ($row2 = mysqli_fetch_array($resultado2)) {
                     ?>    
                     
-                    <tr id="esquis" class="esquis filterElements">
+                    <tr id="pals" class="pals filterElements">
                     <td><?php echo $row2['marca'] ?></td>
                     <td><?php echo $row2['color'] ?></td>
                     <td><?php echo $row2['talla'] ?></td>
@@ -99,7 +100,6 @@
                 
                 ?>
             </table>
-
         </div>
 
 

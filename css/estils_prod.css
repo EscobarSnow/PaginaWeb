@@ -14,26 +14,35 @@ body{
     margin: 0 auto;
     height: auto;
 }
+
 header{
-    padding: 2.5%;
+    position: fixed;
     display: inline-block;
     z-index: 100;
     width: 100%;
     background-color: #152348;
-    margin: 0 auto;
-    height: 200px;
+    margin-bottom: 50px;
+    height: 235px;
+    margin-top: -12%;
 }
 
 header img{
-    width: 12%;
-    height: 12%;
+    width: 10%;
     float: left;
+    margin: 20px 23px 10px 23px;
 }
 
 header h1{
-    padding-top: 5%;
-    font-size: 40px;
+    margin-top: 15px;
+    padding-top: 4%;
+    padding-left: 300px;
+    font-size: 55px;
     color: white;
+}
+
+nav{
+    height: 50px;
+    padding: 50px;
 }
 
 .menu{
@@ -41,13 +50,9 @@ header h1{
     justify-content: flex-end;
     align-items: center;
     font-size: 25px;
-    margin-top: -60px;
+    margin-top: -110px;
 }
 
-nav{
-    height: 50px;
-    padding: 50px;
-}
 .menu a{
     text-decoration: none;
     color: white;
@@ -63,6 +68,7 @@ nav{
 .productes{
     width: 100%;
     height: auto;
+    margin-top: 11%;
     border: 1px solid black;
     background-color: #E2E5E7;
 }
@@ -77,9 +83,8 @@ nav{
 table{
     border-collapse: collapse;
     width: 100%;
-    margin: 5px;
-    
 }
+
 td, th{
     border: 1px solid #dddddd;
     text-align: left;
@@ -113,22 +118,30 @@ tr:nth-child(even){
 }
 
 footer{
-    padding: 2.5%;
+    padding: 1.5% 0;
     width: 100%;
     background-color: #152348;
     margin: 0 auto;
-    height: 200px;
+    height: 100px;
 }
 
 .social{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-top: -20px;
+    margin-right: 20px;
+}
+
+ul, li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .fa{
-    padding: 20px;
-    font-size: 30px;
+    padding: 8px;
+    font-size: 20px;
     width: 50px;
     text-align: center;
     text-decoration: none;
@@ -156,7 +169,7 @@ footer{
 
 .sobreempresa{
     color: #d39c2f;
-    margin-top: -13%;
+    margin-top: -6.7%;
 
 }
 
@@ -171,9 +184,9 @@ footer{
 }
 
 .sobreempresa li{
-    /* margin: 5%; */
     height: auto;
     width: auto;
+    margin-bottom: 5px;
 }
 
 .sobreempresa a{
@@ -184,9 +197,160 @@ footer{
 
 .titolfooter {
     background-color: white;
-    color: #707071;
+    color: black;
     width: 130px;
     border-radius: 5px;
     padding: 3px;
+    margin-bottom: 10px;
 }
 
+
+
+/***************/
+/*MEDIA QUERIES*/
+/***************/
+
+/*MÒBIL*/
+
+@media screen and (max-width: 600px){
+    #all{
+        width: 100%;
+    }
+    
+    header{
+        position: fixed;
+        display: inline-block;
+        z-index: 100;
+        width: 100%;
+        background-color: #152348;
+        margin-bottom: 50px;
+        height: 162px;
+        margin-top: -25%;
+    }
+    
+    header img {
+        width: 110px;
+        margin-top: 0%;
+    }
+    
+    header h1 {
+        margin-top: 7%;
+        padding-left: 33%;
+        font-size: 38px;
+        color: white;
+    }
+    
+    body{
+        margin-top: 0px;
+        width: 100%;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 20px;
+        margin-top: -38px;
+        margin-right: 25%;
+        }
+
+    .menu a{
+        text-decoration: none;
+        color: white;
+        padding: 2% 4%;
+    }
+
+    .menu a:hover{
+        background-color: white;
+        color: #152348;
+    }
+    
+    .productes {
+        width: 100%;
+        height: auto;
+        margin-top: 21%;
+        border: 1px solid black;
+        background-color: #E2E5E7;
+    }
+    
+    footer{
+        padding: 1.5% 0;
+        width: 100%;
+        background-color: #152348;
+        margin: 0 auto;
+        height: 124px;
+    }
+
+    .social{    
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: -5px;
+        margin-right: 5px;
+    }
+
+    .fa{    
+        padding: 7px 0px;
+        font-size: 20px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }
+
+    .fa:hover{
+        opacity: 0.7;
+    }
+
+    .fa-facebook{
+        background: #3B5998;
+        color: white;
+    }
+
+    .fa-instagram {
+        background: #125688;
+        color: white;
+    }
+
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+
+    .sobreempresa{
+        color: #d39c2f;
+        margin-top: -24%;
+
+    }
+
+    .sobreempresa ul{
+        list-style: none;
+        display: inline-block;
+        margin-top: 35px;
+        margin-left: 22px;
+        font-size: 15px;
+        height: auto;
+        width: auto;
+    }
+
+    .sobreempresa li{
+        height: auto;
+        width: auto;
+        margin-bottom: 5px;
+    }
+
+    .sobreempresa a{
+        text-decoration: none;
+        color: #d39c2f;
+        margin-top: -13%;
+    }
+
+    .titolfooter {
+        background-color: white;
+        color: black;
+        width: 130px;
+        border-radius: 5px;
+        padding: 3px;
+        margin-bottom: 10px;
+    }
+}
