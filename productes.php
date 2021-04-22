@@ -29,15 +29,11 @@
         <div class="productes">
             <h2>Productes oferits</h2>
             
-            <div id="filtre">
-                <button class="btn active" onclick="filterSelection('all')">Mostra tot</button>
-                <button class="btn" onclick="filtrarEsquis()" >Esquis</button>
-                <button class="btn" onclick="filtrarBotes()" >Botes</button>
-                <button class="btn" onclick="filtrarPals()" >Pals</button>
-            </div>
+            <input type="text" id="miInput" onkeyup="filtrar()" placeholder="Busca... (Esquis, botes o pals)" title="Escriu un tipus de material">
           
-            <table>
+            <table id="taula">
                 <tr>
+                    <th>Material</th>
                     <th>Marca</th>
                     <th>Color</th>
                     <th>Talla</th>
@@ -52,6 +48,7 @@
                 ?>    
                     
                     <tr id="esquis" class="esquis filterElements">
+                    <td>Esqui</td>
                     <td><?php echo $row['marca'] ?></td>
                     <td><?php echo $row['color'] ?></td>
                     <td><?php echo $row['talla'] ?></td>
@@ -70,6 +67,7 @@
                     ?>    
                     
                     <tr id="botes" class="botes filterElements">
+                    <td>Botes</td>
                     <td><?php echo $row2['marca'] ?></td>
                     <td><?php echo $row2['color'] ?></td>
                     <td><?php echo $row2['talla'] ?></td>
@@ -88,6 +86,7 @@
                     ?>    
                     
                     <tr id="pals" class="pals filterElements">
+                    <td>Pals</td>
                     <td><?php echo $row2['marca'] ?></td>
                     <td><?php echo $row2['color'] ?></td>
                     <td><?php echo $row2['talla'] ?></td>
@@ -132,45 +131,25 @@
     </div>
 
     <script>
-        filterSelection("all")
-            function filtre(c){
-                var x, i;
-                    x = document.querySelectorAll(.filterElements):
-                    if (c == "all") c = "" {
-                        Array.from(x).forEach(item =>{
-                            borrarClasse(item, "show");
-                            if (item.className.indexOf(c) > -1) inserirClasse(item, "show");
-                        });  
+        function filtrar() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("miInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("taula");
+            tr = table.getElementsByTagName("tr");
+            
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                        if (td) {
+                        txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }       
                 }
-            }
-            function inserirClasse(ele, name) {
-                var i, arr1, arr2;
-                arr1 = ele.className.split(" ");
-                arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        if (arr1.indexOf(arr2[i]) == -1) {ele.className += " " + arr2[i];}
-                    }
-            }
-            function borrarClasse(ele, name) {
-                var i, arr1, arr2;
-                arr1 = ele.className.split(" ");
-                arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        while (arr1.indexOf(arr2[i]) > -1) {
-                            arr1.splice(arr1.indexOf(arr2[i]), 1);
-                        }
-                    }
-                    ele.className = arr1.join(" ");
-            }
-            var filtre = document.querySelector(".filtre");
-            var botons = filtre.getElementsByTagName("button");
-                for (i = 0; i < botons.length; i++) {
-                    botons[i].addEventListener("click", function() {
-                        var current = document.getElementsByClassName("active");
-                        current[0].className = current[0].className.replace(" active", "");
-                        this.className += " active";    
-                    });
-                }
+        }
     </script>
 
 </body>
